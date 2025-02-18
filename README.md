@@ -1,4 +1,5 @@
-Notion: https://efficient-sloth-d85.notion.site/Node-js-19d395da577080d1857df227077f1b96
+Meu link: https://rocketseat.com.br/eventos/nlw/convite/darlley-18410
+Notion do projeto: https://efficient-sloth-d85.notion.site/Node-js-19d395da577080d1857df227077f1b96
 
 ### Aula 01 - Criação e configuração inicial do projeto
 
