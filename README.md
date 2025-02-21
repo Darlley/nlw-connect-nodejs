@@ -16,3 +16,17 @@ Sempre que alterar o schema ou criar uma tabela nova:
 ou
 
 `npm run migrate`
+
+---
+
+`STATUS_CODE/301`: redirect permanente (o browser cria um cache para a próxima vez que eu acessar o mesmo link)
+`STATUS_CODE/302`: redirect temporário (o browser acessa o backend novamente o que nos permite fazer a contagem de cliques)
+
+---
+
+No Radis existem algumas estruturas de dados. 
+
+1. `CHAVE/VALOR`: `insert into tabela values('chave', 'valor')`
+2. Lists []
+3. sorted sets: comandos que começam com `'z'`, é como se fosse arrays ordenados por uma coluna ( [ likes: number ] )
+4. hashes {} vamos usar esse: `await redis.hincrby('referral:access-count', subscriberId, 1) ` incrementa o subscriberId 1 por vez
