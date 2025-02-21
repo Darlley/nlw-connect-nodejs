@@ -16,7 +16,7 @@ export const getSubscriberInviteRoute: FastifyPluginAsyncZod = async app => {
           subscriberId: z.string(),
         }),
         response: {
-          302: z.object({
+          200: z.object({
             count: z.number(),
           }),
         },
