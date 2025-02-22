@@ -1,13 +1,24 @@
 @baseUrl = http://localhost:3333
-@subscriberId = "905422ee-98b2-4264-b475-b2f7712cbe0c"
-@referrerId = "309339ac-5b8d-4a8c-b7e9-a40fb1de55ff"
+@subscriberId = 905422ee-98b2-4264-b475-b2f7712cbe0c
+@referrerId = 309339ac-5b8d-4a8c-b7e9-a40fb1de55ff
 
 POST {{baseUrl}}/subscriptions
 Content-Type: application/json
 
 {
-  "name": "Indicado #006",
-  "email": "006@mail.com",
+  "name": "Naruto",
+  "email": "naruto@mail.com",
+  "referrer": {{referrerId}}
+}
+
+###
+
+POST {{baseUrl}}/subscriptions
+Content-Type: application/json
+
+{
+  "name": "Boruto",
+  "email": "boruto@mail.com",
   "referrer": {{referrerId}}
 }
 
@@ -22,3 +33,11 @@ GET {{baseUrl}}/subscribers/{{subscriberId}}/ranking/clicks
 ###
 
 GET {{baseUrl}}/subscribers/{{referrerId}}/ranking/count
+
+###
+
+GET {{baseUrl}}/subscribers/{{referrerId}}/ranking/position
+
+###
+
+GET {{baseUrl}}/ranking

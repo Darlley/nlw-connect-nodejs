@@ -27,14 +27,7 @@ export async function subscribeToEvent({
     .returning()
 
   if (referrerId) {
-    try {
-      const response = await redis.zincrby('referral:ranking', 1, referrerId)
-      console.log(response)
-    } catch (error) {
-      console.log(error)
-    } finally {
-      console.log(`referral:ranking recebeu o referrerId ${referrerId}`)
-    }
+    await redis.zincrby('referral:ranking', 1, referrerId)
   }
 
   const subscriber = result[0]
