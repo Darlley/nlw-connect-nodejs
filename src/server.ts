@@ -35,7 +35,7 @@ app.register(fastifySwagger, {
 })
 
 app.register(fastifySwaggerUi, {
-  routePrefix: '/docs',
+  routePrefix: '/',
 })
 
 app.register(subscribeToEventRoute)
