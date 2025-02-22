@@ -1,11 +1,41 @@
-POST http://localhost:3333/subscriptions
+@baseUrl = http://localhost:3333
+@firstUserId = 
+
+POST {{baseUrl}}/subscriptions
 Content-Type: application/json
 
 {
-  "name": "Goku",
-  "email": "goku@mail.com"
+  "name": "Primeiro usuário",
+  "email": "first@mail.com",
 }
 
 ###
 
-GET http://localhost:3333/invites/naruto123
+POST {{baseUrl}}/subscriptions
+Content-Type: application/json
+
+{
+  "name": "Segundo usuário",
+  "email": "second@mail.com",
+  "referrer": {{firstUserId}}
+}
+
+###
+
+GET {{baseUrl}}/invites/{{firstUserId}}
+
+###
+
+GET {{baseUrl}}/subscribers/{{firstUserId}}/ranking/clicks
+
+###
+
+GET {{baseUrl}}/subscribers/{{firstUserId}}/ranking/count
+
+###
+
+GET {{baseUrl}}/subscribers/{{firstUserId}}/ranking/position
+
+###
+
+GET {{baseUrl}}/ranking
