@@ -30,3 +30,10 @@ No Radis existem algumas estruturas de dados.
 2. Lists []
 3. sorted sets: comandos que começam com `'z'`, é como se fosse arrays ordenados por uma coluna ( [ likes: number ] )
 4. hashes {} vamos usar esse: `await redis.hincrby('referral:access-count', subscriberId, 1) ` incrementa o subscriberId 1 por vez
+
+
+Faça deploy do Redis e PostgreSQL: 
+- [Neon](https://neon.tech/)
+- [Upstash](https://upstash.com/)
+Node
+- [Render](https://render.com/)
